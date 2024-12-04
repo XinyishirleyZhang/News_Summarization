@@ -141,6 +141,7 @@ News_Summarization/
 ├── length_comparison.png       # Static visualization: Word count comparison
 ├── rouge_scores.png            # Static visualization: ROUGE scores
 └── README.md                   # Project documentation
+```
 
 ## Resource Links
 

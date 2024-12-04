@@ -19,18 +19,22 @@ The primary objective of this project is to develop a summarization tool that ca
 ## Model Card & Dataset Card
 
 ### Model
-Name: T5-Base
-Source: [google-t5/t5-base](https://huggingface.co/google-t5/t5-base)
-Architecture: Encoder-Decoder Transformer
-Usage: Text-to-text generation tasks, fine-tuned specifically for summarization tasks in this project.
+- **Name**: T5-Base  
+- **Source**: [google-t5/t5-base](https://huggingface.co/google-t5/t5-base)  
+- **Architecture**: Encoder-Decoder Transformer  
+- **Key Features**:  
+  - Pre-trained on diverse text-to-text generation tasks.
+  - Fine-tuned specifically for news summarization in this project.  
+  - Efficient and adaptable for various text-to-text tasks.  
 
 ### Dataset
-Name: CNN/DailyMail
-Source: [abisee/cnn_dailymail](https://huggingface.co/datasets/abisee/cnn_dailymail)
-Purpose: News articles paired with human-written summaries, serving as a benchmark for text summarization tasks.
-Processing:
-Shuffled and sampled 10,000 rows for training and validation.
-Processed into formats compatible with the T5-Base tokenizer and model.
+- **Name**: CNN/DailyMail  
+- **Source**: [abisee/cnn_dailymail](https://huggingface.co/datasets/abisee/cnn_dailymail)  
+- **Purpose**: Benchmarked for abstractive text summarization.  
+- **Description**: The dataset contains news articles paired with human-generated summaries, providing high-quality training data for text summarization models.  
+- **Preprocessing**:  
+  - Shuffled and sampled 10,000 rows for effective training and validation.  
+  - Preprocessed to be compatible with the T5-Base tokenizer and model.
 
 ## Critical Analysis
 
@@ -70,11 +74,73 @@ Output: Generated summary, word count bar chart, and model performance visualiza
 Content: Demonstrates the layout and functionality of the Gradio interface.
 
 ### Running the Code
+#### Prerequisites:
+1. Python 3.8 or later.
+2. Install necessary Python packages:
+    ```bash
+    pip install torch transformers datasets gradio matplotlib
+    ```
+3. Mount your Google Drive in Colab if running the notebooks in Colab.
 
+##### **Steps**:
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/XinyishirleyZhang/News_Summarization.git
+    cd News_Summarization
+    ```
+2. Run the fine-tuning workflow:
+    ```bash
+    jupyter notebook News_Summarization.ipynb
+    ```
+3. Launch the interactive demo:
+    ```bash
+    jupyter notebook gradio.ipynb
+    ```
+4. Access the Gradio interface and interact with the summarization model.
+
+#### Repository Link:
+[News Summarization Repository](https://github.com/XinyishirleyZhang/News_Summarization)
+
+#### ipynb files:
 1. Fine-Tuning:
 Run [`News_Summarization.ipynb`](News_Summarization.ipynb) to fine-tune the T5-Base model.
 2. Interactive Demo:
 Execute [`gradio.ipynb`](gradio.ipynb) to launch the Gradio interface.
+
+## Gradio Interface
+
+The Gradio interface provides an interactive and user-friendly experience for exploring the fine-tuned T5-Base model. Users can generate concise summaries of news articles and visualize model performance.
+
+### **Key Features**:
+1. **News Input**: Users can paste any news article into the input text box.
+2. **Summary Generation**: A button triggers real-time generation of summaries using the model.
+3. **Word Count Visualization**: Displays a bar chart comparing word counts between the input and the generated summary.
+4. **Model Performance**: Pre-computed visualizations highlight the model's ROUGE scores and length comparison metrics.
+
+### **Gradio Interface Screenshot**:
+<img width="863" alt="Screenshot 2024-12-03 at 22 27 57" src="https://github.com/user-attachments/assets/00ce3378-1714-45f0-8219-7e7916847f75">
+[`Gradio Page.pdf`](Gradio Page.pdf)
+
+## Repository Structure
+
+```plaintext
+News_Summarization/
+│
+├── t5-base-finetuned/          # Fine-tuned model files
+│   ├── config.json
+│   ├── generation_config.json
+│   ├── model.safetensors
+│   ├── special_tokens_map.json
+│   ├── spiece.model
+│   ├── tokenizer.json
+│   └── tokenizer_config.json
+│
+├── News_Summarization.ipynb    # Notebook for data processing, training, and evaluation
+├── gradio.ipynb                # Notebook for generating the Gradio interface
+├── Gradio Page.pdf             # PDF showcasing the Gradio interface
+├── length_comparison.png       # Static visualization: Word count comparison
+├── rouge_scores.png            # Static visualization: ROUGE scores
+└── README.md                   # Project documentation
 
 ## Resource Links
 

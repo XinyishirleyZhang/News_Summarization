@@ -43,6 +43,10 @@ The primary objective of this project is to develop a summarization tool that ca
 1. Efficiency: The T5-Base model demonstrates strong performance in generating concise and coherent summaries.
 2. Scalability: Pre-trained transformer models like T5 allow fine-tuning with relatively small datasets to achieve domain-specific improvements.
 3. Visualization: Performance metrics are clearly illustrated, making the model’s strengths and weaknesses accessible to non-technical audiences.
+![length_comparison](https://github.com/user-attachments/assets/bda8c6ff-6365-4ed2-81ee-ca53135c7112)
+Length Comparison: This visualization highlights the model’s ability to compress a lengthy article into a concise summary while retaining the core information.
+![rouge_scores](https://github.com/user-attachments/assets/2eeb9525-ac1f-464d-afe2-88815a291eca)
+ROUGE Scores: This chart illustrates the model’s performance across different ROUGE metrics, indicating its effectiveness in producing coherent and meaningful summaries.
 
 ### Limitations
 

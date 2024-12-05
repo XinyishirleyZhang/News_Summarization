@@ -158,7 +158,7 @@ News_Summarization/
 2. Dataset Card: [abisee/cnn_dailymail](https://huggingface.co/datasets/abisee/cnn_dailymail)
 3. Hugging Face Transformers: [Documentation](https://huggingface.co/docs/transformers/)
 4. Gradio: [Documentation](https://gradio.app/)
-5. Video Demonstration: []()
+5. Video: [Video Link - google drive](https://drive.google.com/drive/folders/1kNWt0mrCbWKd_5gev1TM6LRIxA95qrqM?usp=drive_link)
 
 ## References
 
